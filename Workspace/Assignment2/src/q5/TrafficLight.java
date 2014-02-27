@@ -227,7 +227,7 @@ public class TrafficLight  extends JFrame {
             panel.add(new DrawingPanelYellow());
             panel.setBackground(BACKGROUND_COLOR2);
             getContentPane().add(panel);
-            getContentPane().revalidate();
+            pack();
         }
     }
     /**.
@@ -248,7 +248,7 @@ public class TrafficLight  extends JFrame {
             panel.add(new DrawingPanelRed());
             panel.setBackground(BACKGROUND_COLOR2);
             getContentPane().add(panel);
-            getContentPane().revalidate();
+            pack();
         }
     }
     /**.
@@ -269,7 +269,7 @@ public class TrafficLight  extends JFrame {
             panel.add(new DrawingPanelGreen());
             panel.setBackground(BACKGROUND_COLOR2);
             getContentPane().add(panel);
-            getContentPane().revalidate();
+            pack();
         }
     }
 
