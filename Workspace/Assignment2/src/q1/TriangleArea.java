@@ -37,4 +37,3 @@ public class TriangleArea {
     }
 
 };
-//This comment was added on the mac
