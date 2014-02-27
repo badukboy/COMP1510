@@ -11,8 +11,8 @@ package q3;
  */
 public class Bookshelf {
     
-    /**
-     * <p>This is the main method (entry point) that gets called by the JVM.</p>
+    /**.
+     * <p>Calling the books itself</p>
      *
      * @param args command line arguments.
      */
@@ -31,7 +31,7 @@ public class Bookshelf {
                 + "\nAuthor: " + book1.getAuthor() 
                 + "\nPublisher: " + book1.getPublisher() 
                 + "\nCopyright Date: " + book1.getCopyDate());
-       System.out.println("\nThe Second book");
-       System.out.println("\n" + book2);
+        System.out.println("\nThe Second book");
+        System.out.println("\n" + book2);
     }
 };

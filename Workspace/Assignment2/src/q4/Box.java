@@ -18,7 +18,7 @@ public class Box {
      */
     private int width;
     /**.
-     * Initializing if the box is full
+     * <p>Initializing if the box is full</p>
      */
     private boolean full;
     /**.
@@ -95,14 +95,14 @@ public class Box {
         depth = depth2;
     }
     /**.
-     * This gets the depth of the box
+     * <p>This gets the depth of the box</p>
      * @return depth of box
      */
     public int getDepth() {
-    return depth;
+        return depth;
     }
     /**.
-     * Returns box values in strong format.
+     * <p>Returns box values in strong format.</p>
      * @return The boxs value
      */
     public String toString() {

@@ -3,16 +3,16 @@ package q4;
 /**.
  * <p>This drives the box class and tests all of its functionality</p>
  *
- * @author Your Name goes here
+ * @author Leon Ho
  * @version 1.0
  */
 public class BoxTest {
     /**.
-     * Setting the dimensions of Box1
+     * <p>Setting the dimensions of Box1</p>
      */
     private static final int BOX_1_DIMENSION = 5;
     /**.
-     * Setting the dimensions of Box2
+     *<p> Setting the dimensions of Box2</p>
      */
     private static final int BOX_2_DIMENSION = 10;
     /**
