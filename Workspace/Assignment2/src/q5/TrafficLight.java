@@ -30,14 +30,6 @@ public class TrafficLight  extends JFrame {
      * <p>Background color 2</p>
      */
     private static final Color BACKGROUND_COLOR2 = new Color(236, 118, 0);
-    /**. 
-     * <p>Default x size of frame</p>
-     */
-    private static final int X = 200;
-    /**.
-     * <p>Default y value of frame.</p>
-     */
-    private static final int Y = 420;
     /**.
      * <p>This sets up the dimension for each panel</p>
      */
@@ -80,7 +72,7 @@ public class TrafficLight  extends JFrame {
         panel.setBackground(BACKGROUND_COLOR2);
         getContentPane().add(panel);
 
-        setSize(X, Y);
+        pack();
         setVisible(true);
     }
     /**.
