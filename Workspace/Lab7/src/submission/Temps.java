@@ -25,9 +25,9 @@ public class Temps {
 
         
         int temp; // temperature reading
-        int highestTemp = DEFAULT_TEMP;
+        int highestTemp = DEFAULT_TEMP * -1;
         int timeOfHighestTemp = 0;
-        int lowestTemp = DEFAULT_TEMP * -1;
+        int lowestTemp = DEFAULT_TEMP;
         int timeOfLowestTemp = 0;
         Scanner scan = new Scanner(System.in);
         //print program heading
