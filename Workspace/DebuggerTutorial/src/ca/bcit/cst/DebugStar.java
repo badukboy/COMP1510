@@ -1,60 +1,61 @@
 package ca.bcit.cst;
 
 public class DebugStar {
-    public static void main(String[] args)
-    {
-        run("+", 6,7);
-        run("-",6,7);
+
+    public static void main(String[] args) {
+        run("+", 6, 7);
+        run("-", 6, 7);
         run(6);
     }
-    private static Operation getOperation(final String key){
+    private static Operation getOperation(final String key) {
         final Operation operation;
-        if(key.equals("+")){
+        if(key.equals("+")) {
             operation = new Add();
         } else {
             operation = new Subtract();
         }
-        return(operation);
+        return (operation);
     }
-    private static void run(final String key, final int a, final int b){
+    private static void run(final String key, final int a, final int b) {
         final Operation operation;
         final int result;
         operation = getOperation(key);
-        result = operation.preform(a,b);
-        System.out.println("result = "+ result);
+        result = operation.perform(a, b);
+        System.out.println("result = " + result);
     }
-    private static void run(final int n){
+    private static void run(final int n) {
         final Factorial factorial;
         final int result;
         factorial = new Factorial();
         result = factorial.perform(n);
-        System.out.println("result = "+result);
+        System.out.println("result = " + result);
     }
 
+
 }
-interface Operation{
-    int preform(int a, int b);
+
+interface Operation {
+    int perform(int a, int b);
 }
-class Add implements Operation{
+class Add implements Operation {
     @Override
-    public int preform(final int a, final int b)
+    public int perform(final int a, final int b)
     {
-        return(a+b);
+        return (a + b);
     }
-    
 }
-class Subtract implements Operation{
+class Subtract implements Operation {
     @Override
-    public int perform(final int a, final int b){
-        return(a-b);
+    public int perform(final int a, final int b) {
+        return (a - b);
     }
 }
-class Factorial{
-    int perform(final int n){
+class Factorial {
+    int perform(final int n) {
         int ret;
         ret = 1;
-        for(int i=1;i<n; i++){
-            ret*=1;
+        for(int i = 1; i < n; i++) {
+            ret *= i;
         }
         return (ret);
     }
