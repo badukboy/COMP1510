@@ -28,37 +28,35 @@ public class Count {
         countBlank = 0;
         //Read in a string and find its length
         while (!phrase.equalsIgnoreCase("quit")) {
-            System.out.println("When you want to quit type quit");
-            System.out.println("Enter a sentence or phrase:");
-            phrase = scan.nextLine();
+        System.out.println("Enter a sentence or phrase:");
+        phrase = scan.nextLine();
+        
+        
+        for (int current = 0; current < phrase.length(); current++) {
+            ch = phrase.charAt(current);
+            switch (ch) {
+            case 'a': 
+            case 'A': countA++;
+            break;
             
+            case 'e':             
+            case 'E': countE++;
+            break;
             
-            for (int current = 0; current < phrase.length(); current++) {
-                ch = phrase.charAt(current);
-                switch (ch) {
-                case 'a': 
-                case 'A': countA++;
-                break;
-                
-                case 'e':             
-                case 'E': countE++;
-                break;
-                
-                case 's':            
-                case 'S': countS++;
-                break;
-                
-                case 't':            
-                case 'T': countT++;
-                break;
-                
-                case ' ': countBlank++;
-                break;
-                default: break;
-                }
+            case 's':            
+            case 'S': countS++;
+            break;
+            
+            case 't':            
+            case 'T': countT++;
+            break;
+            
+            case ' ': countBlank++;
+            break;
+            default: break;
+            }
         }
-        if(countT != 0) 
-            countT--;
+        countT--;
         }
         System.out.println();
         System.out.println("Number of blank spaces:  " + countBlank);
