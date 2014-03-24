@@ -33,6 +33,8 @@ public class Guess {
                 guess = scan.nextInt();
                 numberOfGuesses++;
                 lowGuess++;
+            } else if (guess == numToGuess) {
+                break;
             } else {
                 System.out.println("That number is too high try again");
                 guess = scan.nextInt();
