@@ -18,4 +18,9 @@ public class RandomWalk {
         currentX = startX;
         currentY = startY;
     }
+    public String toString() {
+        return "Steps:" + totalSteps
+                + "\nPosition: (" + currentX + "," + currentY + ")";
+    }
+    
 }
