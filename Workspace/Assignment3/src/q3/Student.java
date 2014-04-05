@@ -85,6 +85,9 @@ public class Student {
      * @param testNumber The test number to be assigned.
      */
     public void setTestScore(float score, int testNumber) {
+        if (testNumber > TEST3 || testNumber <= 0) {
+            throw new IllegalArgumentException("Invalid test number");
+        }
         if (testNumber == TEST1) {
             testScore1 = score;
         } else if (testNumber == TEST2) {
@@ -99,6 +102,9 @@ public class Student {
      * @return the test score.
      */
     public float getTestScore(float testNumber) {
+        if (testNumber > TEST3 || testNumber <= 0) {
+            throw new IllegalArgumentException("Invalid test number");
+        }
         if (testNumber == TEST1) {
             return testScore1;
         } else if (testNumber == TEST2) {

@@ -7,7 +7,7 @@ public class RandomWalk {
     static final int DOWN = 3;
     static final int POSSIBLE_DIRECTIONS = 4;
     private static Random gen = new Random();
-
+    private int maxDistance;
     private int maxSteps;    
     private int currentX;
     private int currentY;
@@ -19,12 +19,14 @@ public class RandomWalk {
         boundry = edge;
         currentX = 0;
         currentY = 0;
+        maxDistance = 0;
     }
     public RandomWalk(int max, int edge, int startX, int startY) {
         maxSteps = max;
         boundry = edge;
         currentX = startX;
         currentY = startY;
+        maxDistance = 0;
     }
     public String toString() {
         return "Steps:" + totalSteps
@@ -51,6 +53,7 @@ public class RandomWalk {
             break;
             
         }
+        maxDistance = Math.abs(max(Math.abs(currentX) , Math.abs(currentY)));
     }
     public boolean moreSteps() {
         if (totalSteps < maxSteps) {
@@ -72,6 +75,22 @@ public class RandomWalk {
     public void walk() {
         while (inBounds() && moreSteps()) {
             takeStep();
+        }
+    }
+    public int getX() {
+        return currentX;
+    }
+    public int getY() {
+        return currentY;
+    }
+    public int getMaxDistance() {
+        return maxDistance;
+    }
+    private static int max (int num1, int num2) {
+        if(num1 > num2) {
+            return num1;
+        } else {
+            return num2;
         }
     }
 }

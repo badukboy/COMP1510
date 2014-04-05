@@ -24,7 +24,7 @@ public class TestCourse {
     public static void main(String[] args) {
         DecimalFormat fmt = new DecimalFormat("0.##");
         Random rand = new Random();
-        // your code will go here!!!
+        System.out.println("Creating 4 new students with random test Scores");
         Address address = new Address("1111 Kingsway Ave", "Vancouver"
                 , "BC" , "V5X 2C1");
         Student jerry = new Student("Jerry", "Chan", address, address

@@ -30,7 +30,8 @@ public class TestStudent {
      * @param args command line arguments.
      */
     public static void main(String[] args) {
-        
+        int testNumber;
+        int testScore;
         System.out.println("THIS CLASS DRIVES STUDENT\n");
         Student leon = new Student();
         System.out.println("Outputing empty student with default constructor" 
@@ -48,6 +49,17 @@ public class TestStudent {
         leon.setTestScore(0, 2);
         leon.setTestScore(0, TEST3);
         System.out.println("Outputting again with the new information changed");
+        System.out.println(leon);
+        System.out.println("Select a score to give, and a test to give it to"
+                + " separated by a space\nEX: 100, 2");
+        testScore = scan.nextInt();
+        testNumber = scan.nextInt();
+        try {
+            leon.setTestScore(testScore, testNumber);
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Invliad test number");
+        }
+        System.out.println("Now outputting student with the updated score");
         System.out.println(leon);
     }
     /**.
