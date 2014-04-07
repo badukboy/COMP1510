@@ -95,6 +95,9 @@ public class Student {
         } else if (testNumber == TEST3) {
             testScore3 = score;
         }
+        if(testNumber > 3 || testNumber <=0) {
+            throw new IllegalArgumentException("Invalid test number");
+        }
     }
     /**.
      * This method gets the score for the a given test.
@@ -111,6 +114,9 @@ public class Student {
             return testScore2;
         } else if (testNumber == TEST3) {
             return testScore3;
+        }
+        if(testNumber > 3 || testNumber <=0) {
+            throw new IllegalArgumentException("Invalid test number");
         }
         return 0;
     }
