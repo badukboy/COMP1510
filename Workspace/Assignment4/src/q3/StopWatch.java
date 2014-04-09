@@ -60,6 +60,10 @@ public class StopWatch extends JFrame {
          */
         private JLabel time = new JLabel("0.00");
         /**.
+         * <p>This is a button for reseting the timer</p>
+         */
+        private JButton reset = new JButton("Reset!");
+        /**.
          * <p>This sets the format of the output</p>
          */
         private DecimalFormat fmt = new DecimalFormat("0.##");
@@ -80,11 +84,13 @@ public class StopWatch extends JFrame {
          * and elements onto the panel</p>
          */
         private StopWatchPanel() {
-            setLayout(new GridLayout(2, 2));
+            setLayout(new GridLayout(3, 2));
             start.addActionListener(listener);
             stop.addActionListener(listener);
+            reset.addActionListener(listener);
             add(start);
             add(stop);
+            add(reset);
             add(time);
 
         }
@@ -117,8 +123,12 @@ public class StopWatch extends JFrame {
             public void actionPerformed(ActionEvent event) {
                 if (event.getSource() == start) {
                     timer.start();
+                } else if(event.getSource() == stop) {
+                    timer.stop();
                 } else {
                     timer.stop();
+                    timeSet = 0;
+                    time.setText(fmt.format(timeSet));
                 }
             }
         }
