@@ -11,7 +11,7 @@
   <taskdef resource="checkstyletask.properties" classpath="lib/checkstyle-all-5.0.jar"/>
 
   <!-- REPLACE THIS NAME WITH YOUR OWN -->
-  <property name="studentName" value="Bloggs,Fred"/>
+  <property name="studentName" value="Ho,Leon"/>
 
   <property name="build" location="build"/>
   <property name="dist" location="dist"/>
